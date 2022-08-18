@@ -11,4 +11,6 @@ public interface CustomerLoanService {
 	CustomerLoan getLoanByCustomerId(Long id);
 	List<CustomerLoan> getAllLoans();
 	void addCustomerLoan(CustomerLoanDto customerLoanDto);
+	void deleteLoanByCustomerId(Long id);
+	void setLoanByCustomerId(Long id, Long newLoan);
 }

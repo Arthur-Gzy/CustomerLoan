@@ -48,5 +48,15 @@ public class CustomerLoanServiceImpl implements CustomerLoanService{
 		customerLoan.setCustomerLoan(customerLoanDto.getLoanQuantity());
 		customerLoanRepository.save(customerLoan);
 	}
+	
+	@Override
+	public void deleteLoanByCustomerId(Long id) {
+		customerLoanRepository.deleteCustomerLoanById(id);
+	}
+	
+	@Override
+	public void setLoanByCustomerId(Long id, Long newLoan) {
+		customerLoanRepository.setCustomerLoanById(id, newLoan);
+	}
 
 }
